@@ -13,17 +13,20 @@ public class mainClass {
 
         System.out.print("Enter seconds: ");
         Scanner scanner = new Scanner(System.in);
-        String res = scanner.nextLine();
-        int delay = 1000;
-        int period = 1000;
-        timer = new Timer();
-        internal = Integer.parseInt(res);
-        System.out.println(res);
-        timer.scheduleAtFixedRate(new TimerTask() {
-            public void run() {
-                System.out.println(setInterval());
-            }
-        }, delay, period);
+
+
+            String res = scanner.nextLine();
+            int delay = 1000;
+            int period = 1000;
+            timer = new Timer();
+            internal = Integer.parseInt(res);
+            System.out.println(res);
+            timer.scheduleAtFixedRate(new TimerTask() {
+                public void run() {
+                    System.out.println(setInterval());
+                }
+            }, delay, period);
+
     }
     private static final int setInterval() {
         if (internal == 1)
